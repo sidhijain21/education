@@ -1,0 +1,482 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>education</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/> 
+      <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+    .nav{
+        display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vw 1vw;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgb(0 0 0 / 15%);
+    box-sizing: border-box;
+    z-index: 100;
+    }
+    .nav>img{
+        width: 150px;
+        cursor: pointer;
+    }
+    .navigation>ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .navigation>ul>li{
+        list-style: none;
+        margin-left: 30px;
+    }
+    .navigation>ul>li>a{
+        text-decoration: none;
+        color: rgb(21, 21, 100);
+        font-size: 16px;
+        font-weight: 500;
+        transition: 0.3s ease;
+}
+.navigation>ul>li>a:hover{
+    color: azure;
+}
+#home{
+          padding-top: 40px;
+          background-image: linear-gradient(rgba(9,5,54,0.3),rgba(5,4,46,0.7)),url(/images/back.jpg);
+          width: 100%;
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+}
+#home>h2{
+    color: white;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+#home>p{
+    width: 50%;
+    color: white;
+    font-size: 0.9rem;
+    line-height:  25px;
+}
+.btn{
+    margin-top: 30px;
+
+}
+.btn>a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 15px 35px;
+    background-color: white;
+    font-weight: 600;
+    border-radius: 5px;
+}
+a.blue{
+    color: white;
+    background-color: rgb(21, 21, 100);
+    transition: 0.3s ease;
+}
+a.blue:hover{
+    color: rgb(21, 21, 100);
+    background-color: white
+}
+a.yellow{
+    color: white;
+    background-color:yellow;
+    transition: 0.3s ease;
+}
+a.yellow:hover{
+    color:rgb(21, 21, 100);
+    background-color: white
+}
+#features{
+    padding: 5vw 8vw 0 8vw;
+    text-align: center;
+}
+.base{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+    
+}
+#features .box {
+    background-color:rgb(211, 207, 207);
+    text-align: start;
+}
+#features .box i{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(44, 44, 80);
+
+}
+#features .box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(46, 46, 59);
+    padding: 13px 0 7px 0;
+
+}
+#features .box p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(46, 46, 59);
+}
+#course{
+    padding: 10vw 10vw 0 8vw;
+    text-align: center;
+}
+#course .course-box{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+#course .courses{
+    text-align: start;
+    background: wheat;
+    height: 100%;
+    position: relative;
+}
+#course .courses img{
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+}
+#course .courses details{
+    padding: 15px 15px 0 15px;
+
+}
+#course .courses details i{
+    color: antiquewhite;
+    font-size: 00.9rem;
+}
+#course .courses .cost{
+    background-color: rgb(74,74,136);
+    color: aliceblue;
+    line-height: 50px;
+    width: 50px;
+    height: 44px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    bottom: 30%;
+}
+#registration{
+    position: absolute;
+    padding: 8vw 6vw 8vw 6vw;
+    background-image: linear-gradient(rgba(99,112,168,0.5),rgba(81,91,233,0.5)),url(/images/signup.jpg);
+    width: 100%;
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#registration .reminder{
+    color: azure;
+}
+#registration .reminder .h1{
+    color: azure;
+
+}
+#registration .reminder .time{
+    display: flex;
+    margin-top: 40px;
+}
+#registration .reminder .time .date{
+    text-align: center;
+    padding: 13px 33px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter:blur(4px);
+    box-shadow: 0 8px 32px 0 rgba(32,38,135,0.37);
+    border-radius: 10px;
+    margin: 0 5px 10px 5px;
+    border: 1px solid rgba(255,255,255,0.18);
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+    }
+#registration .form{
+    background: aliceblue;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(32,38,135,0.37);
+}
+#registration .form input{
+    margin: 10px 0;
+    padding: 15px 10px;
+    border: 1px solid rgb(84, 40, 241);
+    outline: none;
+}
+#registration .form a.yellow{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 15px 35px;
+    background-color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+    background-color:yellow;
+    transition: 0.3s ease;
+}
+#registration .form a.yellow:hover{
+    color:rgb(21, 21, 100);
+    background-color: white
+}
+
+
+
+
+
+    </style>
+    
+    
+</head>
+<body>
+    <div class="nav">
+        <img src="/images/logo.svg" alt="">
+        <div class="navigation">
+            <ul>
+                <li><a href="$">Home</a> </li>
+                <li><a href="$">About</a> </li>
+                <li><a href="$">Blog</a> </li>
+                <li><a href="$">Courses</a> </li>
+                <li><a href="$">Contact us</a> </li>
+            </ul>
+        </div>
+    </div>
+    <section id="home">
+        <h2>
+            Enhance your future with Techedu
+        </h2>
+        <P>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea earum in fuga dolores cupiditate! Exercitationem esse veritatis vero similique quas quidem culpa eligendi non. Assumenda excepturi illum voluptatibus at inventore.
+        </P>
+        <div class="btn">
+            <a class="blue" href="#">learn more</a>
+            <a class="yellow" href="#">visit course</a>
+            
+        </div>
+    </section>
+    <section id="features">
+        <h1>
+            AWESOME FEATURES
+        </h1>
+        <p>
+            replenish man have thing gathering lights yielding shall you
+        </p>
+        <div class="base">
+            <div class="box">
+                <i class=" fas fa-graduation-cap"></i>
+                <h3>
+                    scholarship facility
+                </h3>
+                <p>
+                    one make creepeth,man bearing theira firmament
+                </p>
+            </div>
+            <div class="box">
+                <i class="fa-file-certificate"></i>
+                <h3>
+                    online course
+                </h3>
+                <p>
+                    one make creepeth,man bearing theira firmament
+                </p>
+            </div>
+            <div class="box">
+                <i class=" fas fa-award"></i>
+                <h3>
+                    global certification
+                </h3>
+                <p>
+                    one make creepeth,man bearing theira firmament
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="course">
+        <h1>OUR POPULAR COURSES</h1>
+        <p>
+            one make creepeth,man bearing theira firmament
+        </p>
+        <div class="course-box">
+            <div class="courses">
+                <img src="images/c1.jpg" alt="">
+                <div class="details">
+                    <span>
+                        updated -21/08/21
+                    </span>
+                    <h6>
+                        javascript beginners course
+                    </h6>
+                    <div class="star">
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <span>(232)</span>
+                    </div>
+                </div>
+                <div class="cost">$49</div>
+
+            </div>
+            <div class="courses">
+                <img src="images/c2.jpg" alt="">
+                <div class="details">
+                    <span>
+                        updated -21/08/21
+                    </span>
+                    <h6>
+                        javascript beginners course
+                    </h6>
+                    <div class="star">
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <span>(232)</span>
+                    </div>
+                </div>
+                <div class="cost">$49</div>
+
+            </div>
+            <div class="courses">
+                <img src="images/c3.jpg" alt="">
+                <div class="details">
+                    <span>
+                        updated -21/08/21
+                    </span>
+                    <h6>
+                        javascript beginners course
+                    </h6>
+                    <div class="star">
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <span>(232)</span>
+                    </div>
+                </div>
+                <div class="cost">$49</div>
+
+            </div>
+            <div class="courses">
+                <img src="images/c4.jpg" alt="">
+                <div class="details">
+                    <span>
+                        updated -21/08/21
+                    </span>
+                    <h6>
+                        javascript beginners course
+                    </h6>
+                    <div class="star">
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <span>(232)</span>
+                    </div>
+                </div>
+                <div class="cost">$49</div>
+
+            </div>
+            <div class="courses">
+                <img src="images/c5.jpg" alt="">
+                <div class="details">
+                    <span>
+                        updated -21/08/21
+                    </span>
+                    <h6>
+                        javascript beginners course
+                    </h6>
+                    <div class="star">
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <span>(232)</span>
+                    </div>
+                </div>
+                <div class="cost">$49</div>
+
+            </div>
+            <div class="courses">
+                <img src="images/c6.jpg" alt="">
+                <div class="details">
+                    <span>
+                        updated -21/08/21
+                    </span>
+                    <h6>
+                        javascript beginners course
+                    </h6>
+                    <div class="star">
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <i class="fa-solid-fa-star"></i>
+                        <span>(232)</span>
+                    </div>
+                </div>
+                <div class="cost">$49</div>
+            </div>
+        </div>
+    </section>
+    <selection id="registration">
+        <div class="reminder">
+            <p>
+                Get 100 online courses for free
+            </p>
+            <h1>
+                Register to get it!
+            </h1>
+            <div class="time">
+                <div class="date">
+                    18 <br> days
+                </div>
+                <div class="date">
+                    23 <br> hours
+                </div>
+                <div class="date">
+                   06 <br> minutes
+                </div>
+                <div class="date">
+                    58 <br> seconds
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <h3>
+                CREATE FREE ACCOUNT NOW!
+            </h3>
+            <input type="text" placeholder="NAME" name="" id="">
+            <input type="text" placeholder="PHONE NUMBER" name="" id="">
+            <input type="text" placeholder="EMAIL ADDRESS" name="" id="">
+            <div class="btn">
+                <a class="yellow" href="#">SUBMIT NOW</a>
+                
+        </div>
+    </selection>
+
+
+    
+</body>
+</html>
